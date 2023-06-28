@@ -1,0 +1,52 @@
+﻿<Window x:Class="Communication.ProfileWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Communication"
+        mc:Ignorable="d"
+       Title="Communication" Height="500" Width="300" ResizeMode="NoResize" SizeToContent="Manual" WindowStartupLocation="CenterScreen" WindowState="Normal" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Icon="/logog.png" Closed="Window_Closed" Closing="Window_Closing">
+    <Grid Background="#FF403582" HorizontalAlignment="Center" VerticalAlignment="Center" Width="300" Height="484">
+        <Button x:Name="EditButton" Content="Редактировать" HorizontalAlignment="Right" Margin="0,387,10,0" Background="{x:Null}" Foreground="White" FontWeight="Bold" FontFamily="Times New Roman" FontSize="18" BorderBrush="White" Click="EditButton_Click" Width="280" Height="34" VerticalAlignment="Top">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="DeleteButton" Content="Удалить" HorizontalAlignment="Right" Background="{x:Null}" Foreground="White" FontWeight="Bold" FontFamily="Times New Roman" FontSize="18" BorderBrush="White" Click="DeleteButton_Click" Margin="0,426,10,0" Width="280" Height="36" VerticalAlignment="Top">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Grid Margin="0,0,53,395" Background="#FF1D183C" Height="46" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="247">
+            <TextBlock x:Name="LoginBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Center" Height="34" Width="100" Margin="116,0,0,0" FontWeight="Bold" Foreground="White" FlowDirection="LeftToRight" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.HorizontalScrollBarVisibility="Hidden" RenderTransformOrigin="0.5,0.5">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+            <Button x:Name="BackButton" Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Center" Height="36" Width="96" Background="{x:Null}" Foreground="White" FontWeight="Bold" FontFamily="Times New Roman" FontSize="18" BorderBrush="White" Click="BackButton_Click" Margin="10,0,0,0">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </Grid>
+        <Button x:Name="CloseButton" Content="Выход" HorizontalAlignment="Left" Margin="0,94,0,0" Background="#FF1D183C" Foreground="#FFDA7777" FontWeight="Bold" FontFamily="Times New Roman" FontSize="18" BorderBrush="{x:Null}" Click="CloseButton_Click" Width="247" Height="34" VerticalAlignment="Top">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+    </Grid>
+</Window>

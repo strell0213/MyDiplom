@@ -1,0 +1,41 @@
+﻿<Window x:Class="Communication.AdminCommunicationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Communication"
+        mc:Ignorable="d"
+        Title="Communication" Height="720" Width="1080" ResizeMode="NoResize" SizeToContent="Manual" WindowStartupLocation="CenterScreen" WindowState="Normal" Closed="Window_Closed" Icon="/logog.png">
+    <Grid Background="#FF403582">
+        <Image Source="/цй.png" Stretch="Fill" HorizontalAlignment="Center" Width="1080" Height="617" VerticalAlignment="Top" Margin="0,87,0,0"/>
+        <Grid Background="#FF2C255B" Height="82" VerticalAlignment="Top">
+            <Border BorderBrush="Black" BorderThickness="1" Margin="698,12,0,7" HorizontalAlignment="Left" Width="372" Background="#FF1D183C">
+                <Border.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="25"/>
+                    </Style>
+                </Border.Resources>
+            </Border>
+        </Grid>
+        <Button x:Name="ProfileButton" Content="m" HorizontalAlignment="Left" Margin="958,17,0,0" VerticalAlignment="Top" Height="53" Width="95" Background="{x:Null}" Foreground="White" FontWeight="Bold" FontFamily="Webdings" FontSize="36" BorderBrush="White" Click="ProfileButton_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <TextBlock x:Name="TextVIEW" HorizontalAlignment="Left" Margin="782,17,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" FontSize="20" Width="156" Height="53" FlowDirection="RightToLeft"/>
+        <ListBox x:Name="QueView" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,111,0,0" Background="{x:Null}" BorderBrush="White" Foreground="White" FontWeight="Bold" SelectionChanged="QueView_SelectionChanged"></ListBox>
+        <Button x:Name="AllProfileButton" Content="Все пользователи" HorizontalAlignment="Left" Margin="19,17,0,0" VerticalAlignment="Top" Height="53" Width="132" Background="{x:Null}" Foreground="White" FontWeight="Bold" FontFamily="Arial" FontSize="11" BorderBrush="White" Click="AllProfileButton_Click">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="AnswerButton" Content="Ответить" HorizontalAlignment="Left" Margin="514,82,0,0" VerticalAlignment="Top" Height="29" Width="283" Background="#FF2C255B" Foreground="White" Click="AnswerButton_Click"/>
+        <Button x:Name="Deletebutton" Content="Удалить" HorizontalAlignment="Left" Margin="797,82,0,0" VerticalAlignment="Top" Height="29" Width="283" Foreground="White" Background="#FF2C255B" Click="Button_Click"/>
+        <Button x:Name="updateButton" Content="Обновить" HorizontalAlignment="Left" Margin="0,82,0,0" VerticalAlignment="Top" Height="29" Width="514" Background="#FF2C255B" Foreground="White" Click="updateButton_click"/>
+
+    </Grid>
+</Window>

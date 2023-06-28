@@ -1,0 +1,20 @@
+﻿<Window x:Class="Communication.AnswerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Communication"
+        mc:Ignorable="d"
+        Title="AnswerWindow" Height="200" Width="500" Icon="/logog.png">
+    <Grid Background="#FF403582">
+        <TextBox x:Name="AnswerText" Margin="20,25,32,34" TextWrapping="Wrap" Background="#FF382F70" Foreground="White" FontWeight="Bold"/>
+        <Button x:Name="AnswerButton" Content="Отправить" Margin="205,0,212,7" VerticalAlignment="Bottom" Background="#FF382F70" Foreground="White" FontWeight="Bold" Click="AnswerButton_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+    </Grid>
+</Window>
